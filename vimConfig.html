@@ -20,7 +20,7 @@ set bg=dark
 set hlsearch
 set incsearch
 
-" Set tab width to 4 spaces
+" set tab width to 4 spaces
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -28,11 +28,17 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+" use tabs on makefiles
+autocmd FileType make setlocal noexpandtab
+
 set nocompatible
 syntax on
 set fileformat=unix
-set number
 colorscheme desert
+
+" Set relative line numbers except current line
+set number
+set relativenumber
 
 " Enable autocomplete
 set wildmode=longest,list,full
@@ -44,6 +50,7 @@ set splitbelow splitright
 set cursorline
 highlight CursorLine ctermfg=NONE ctermbg=232 cterm=NONE
 highlight CursorLineNr ctermfg=black ctermbg=074 cterm=NONE
+
 </code>
 <br>
 	</div class="floating_box">
