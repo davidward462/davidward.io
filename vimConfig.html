@@ -16,9 +16,17 @@
 		<p>Content of my .vimrc file:</p>
 
 		<code id="copy">
-set bg=dark
-set hlsearch
-set incsearch
+set nocompatible " set as not compatible with vi
+set hlsearch " hightlight search pattern matches
+set incsearch " show match for search pattern while typing it
+
+set ruler " show cursor position on lower right corner 
+set showcmd " show incomplete command
+
+set history=200 " command history
+
+" detect filetype and use corresponding indentation and highlighting
+filetype plugin indent on 
 
 " set tab width to 4 spaces
 set tabstop=4
@@ -31,10 +39,12 @@ set autoindent
 " use tabs on makefiles
 autocmd FileType make setlocal noexpandtab
 
-set nocompatible
-syntax on
-set fileformat=unix
+syntax on " syntax highlighting
+set fileformat=unix " line endings
+
+" Colors
 colorscheme desert
+set bg=dark
 
 " Set relative line numbers except current line
 set number
@@ -46,9 +56,12 @@ set wildmode=longest,list,full
 " Set split window to be on the right
 set splitbelow splitright
 
-" Highlight current line in a dark grey (232), highlight current line number in light blue (074)
-set cursorline
+set cursorline " Allow the line the cursor is on to be highlighted
+
+" Highlight current line in a dark grey (232)
 highlight CursorLine ctermfg=NONE ctermbg=232 cterm=NONE
+
+" Highlight current line number in light blue (074)
 highlight CursorLineNr ctermfg=black ctermbg=074 cterm=NONE
 
 </code>
