@@ -1,21 +1,3 @@
-<!DOCTYPE HTML>
-<html lang="en">
-
-<head>
-	<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-	<h1>Vim configuration</h1>
-
-	<div class="floating_box">
-		<br>
-
-        <button type="button" onClick="copyEvent('copy')">Copy</button>
-		<p>Content of my .vimrc file:</p>
-
-		<code id="copy">
 set nocompatible " set as not compatible with vi
 set hlsearch " hightlight search pattern matches
 set incsearch " show match for search pattern while typing it
@@ -63,24 +45,3 @@ highlight CursorLine ctermfg=NONE ctermbg=232 cterm=NONE
 
 " Highlight current line number in light blue (074)
 highlight CursorLineNr ctermfg=black ctermbg=074 cterm=NONE
-
-</code>
-<br>
-	</div class="floating_box">
-
-	<footer><p><a href="index.html">home</a></p></footer>
-
-</body>
-
-
-<script>
-    function copyEvent(id)
-    {
-        var str = document.getElementById(id);
-        window.getSelection().selectAllChildren(str);
-        document.execCommand("Copy");
-    }
-</script>
-
-
-</html>
