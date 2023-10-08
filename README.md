@@ -1,2 +1,2 @@
 # davidward.io
-My Personal Website
+Personal Website
