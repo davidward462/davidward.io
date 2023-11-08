@@ -13,8 +13,8 @@
 
 <body>
 	<div class="floating_box">
-        <h3>October 23rd, 2023</h3>
-        <h4>Progress</h4>
+        <h2>Oct 23, 2023</h2>
+        <h3>Progress</h3>
         <p>
 The IPFS whitepaper has been read, along with several research papers describing and assessing the system in general. Notes on the system and summaries of the research papers have also been written. At this point, the general direction of the project will be as follows:
         </p>
@@ -23,7 +23,7 @@ The IPFS whitepaper has been read, along with several research papers describing
 Documentation will be written about the structure and purpose of IPFS by using the whitepaper, IPFS developer docs, and research papers as sources. This will be done to condense and simplify the existing documentation. 
         </p>
 
-        <h4>Plan</h4>
+        <h3>Plan</h3>
         <p>
 The plan is also to do some technical research on the system itself. We will try to host an IPFS and document the process, with emphasis on the user's perspective. We will try to replicate some of the research seen in the papers, which relates to the performance of IPFS (i.e. retrieval  time of objects, latency, etc). An emphasis will be placed on storing and retrieving multimedia-related files like images, video, etc.
         </p>
@@ -33,10 +33,79 @@ The plan is also to do some technical research on the system itself. We will try
 Finally, we will make an assessment of the strengths, weaknesses, and overall viability of IPFS. This will include design elements that we want to be included or want to change, and what direction the system should go in the future.
         </p>
 
-        <h4>Next Steps</h4>
+        <h3>Next Steps</h3>
         <p>
 The next steps of the project include the following: create outline/skeleton of IPFS specification, host node, determine applicable experiments that can be run on the hardware we have, in a reasonable amount of time, host multimedia files on IPFS.
         </p>
+	</div>
+	<div class="floating_box">
+        <h2>Nov 6 2023</h2>
+
+        <p>Most of the project time has been spent on research of the IPFS system documentation, reading relevant papers, and creating notes. </p>
+
+        <p>Primary references:</p>
+
+        <p>[1] "IPFS - Content Addressed, Versioned, P2P File System", <a href="https://raw.githubusercontent.com/ipfs/papers/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf">https://raw.githubusercontent.com/ipfs/papers/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf</a></p>
+
+        <p>[2] "Design and Evaluation of IPFS:
+
+        A Storage Layer for the Decentralized Web", <a href="https://ipfs.io/ipfs/bafybeid6doxhzck3me366265u3ony6rbuzv7dze7pjuptxeln24b2qvur4?filename=trautwein2022a.pdf">https://ipfs.io/ipfs/bafybeid6doxhzck3me366265u3ony6rbuzv7dze7pjuptxeln24b2qvur4?filename=trautwein2022a.pdf</a></p>
+
+        <p>[3] "IPFS and Friends: A Qualitative Comparison of Next Generation Peer-to-Peer Data Networks", Available: <a href="https://arxiv.org/abs/2102.12737">https://arxiv.org/abs/2102.12737</a></p>
+
+        <p>[4] "Toward Decentralized Cloud Storage With IPFS: Opportunities, Challenges, and Future Considerations", Available: <a href="https://ieeexplore.ieee.org/document/9903549">https://ieeexplore.ieee.org/document/9903549</a></p>
+        <p>[5] <a href="https://ipfs.tech/">https://ipfs.tech/</a></p>
+
+        <p>The above references are the main sources for the system specifications. A summary of the system has been written, which will be used in the main report. Here are some key aspects of IPFS:</p>
+
+        <h3>Introduction to IPFS</h3>
+
+        <p>The goal of IPFS is to construct a single distributed filesystem which could be accessed by any computer. There is no single point of failure and nodes in the system do not need to trust eachother.[1]</p>
+
+        <p>HTTP has many limitations are now coming to light, with challenges like handling massive datasets and interacting with data across many organizations. The way the web was originally constructed is not suitable for all uses today, and new protocols and systems are needed. [1]</p>
+
+        <h3>Components</h3>
+
+        <p>IPFS is built from a selection of preexisting technologies that are combined into a modular stack.[1]</p>
+
+        <p>There are 4 important aspects which make IPFS work the way it does:</p>
+
+        <ol>
+        <li>Content-based adressing</li>
+        <li>Decentralized object indexing</li>
+        <li>Peer Addressing</li>
+        <li>Immutability</li>
+        </ol>
+
+        <h4>Content Adressing [2]</h4>
+
+        <p>When content (i.e. a file) is uploaded to IPFS, it is broken into chunks of a certain size (256kB), and each chunk is given a Content Identifier (CID). </p>
+
+        <p>CID has a designated structure which holds some data (like a header) and then contains the hash of the file content. Using all the chunks of a file, IPFS makes a Merkle Directed Acyclic Graph (DAG) of the file.</p>
+
+        <p><code> cid version | multicodec | length | actual hash </code></p>
+
+        <h4>Obejct Indexing</h4>
+
+        <p>The IPFS network has a mapping of CID and PeerID for a particular object so that it can serve it to a client. Mappings are stored in a Distributed Hash Table (DHT).[2]</p>
+
+        <h4>Peer Addressing</h4>
+        <p>When a peer joins the IPFS network, it generates a public-private key pair. </p>
+
+        <p>Each peer in the network is given and identified by a unique PeerID, which is a hash of it&#39;s public key. The PeerID does not change unless it is changes manually. Its function is to ensure that the public key used to secure the communication channel between peers is the same one that identifies them.[2]</p>
+
+        <h4>Content Immutability</h4>
+
+        <p>CIDs are inherently permenant and immutable. Dynamic content can be specified to be published using a hash of the providers public key (i.e. PeerID) instead of the CIC. Additional constructs are used to create an immutable reference to the content which is not based on a hash of the actual data.[2]</p>
+
+        <h4>Assessment of Previous Research</h4>
+
+        <p>The research of the performance of IPFS done in [2] was very in-depth and took place over a period of several months. Surveying a decentrilized systems takes a significant amount of time because there are nodes and node clusters all over the world, and many are created and disappear in a matter of hours or days. This depth of data collection will not be feasible in this project, so more time will be dedicated to describing exsisting research rather than doing our own. </p>
+
+        <h2>Project Direction</h2>
+
+        <p>The project will consist of several parts. The first section will be a report describing the technical specifications and components of IPFS. The next section will describe the research that has been done. The third part will be my own research and testing, mostly looking at how easy and effective it is to host and distribute multimedia files over IPFS. More planning needs to go into this section. Finally, as summary will be given on the possible future of a decentralized internet.</p>
+
 	</div>
 	
     <footer>
