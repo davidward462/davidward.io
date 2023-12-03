@@ -131,6 +131,13 @@ pre { /** <pre> tag removes the need for paragraph tags to separate paragraphs. 
 	text-align: left;
 }
 
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
+
+
 footer {
 	text-align: center;
 }
