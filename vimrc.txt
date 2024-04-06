@@ -8,13 +8,20 @@ set showcmd " show incomplete command
 set history=200 " command history length
 
 " detect filetype and use corresponding indentation and highlighting
-filetype plugin indent on 
+filetype plugin indent on
 
-" set tab width to 4 spaces
-set tabstop=4 " tab is the width of 4 spaces
-set softtabstop=4
-set shiftwidth=4
-set expandtab " expand tabs to become the designated number of spaces (here, 4)
+" display character metadata
+set list
+
+" Don't use python style for .py files.
+" Specifically allow tab sizes to be changed as below.
+let g:python_recommended_style = 0
+
+" set tab width to 8 spaces
+set tabstop=8 " tab is the width of 8 spaces
+set softtabstop=0
+set shiftwidth=8
+set expandtab " expand tabs to become the designated number of spaces
 
 set autoindent " maintain indentation from previous line
 
@@ -25,7 +32,7 @@ syntax on " syntax highlighting
 set fileformat=unix " line endings
 
 " Colors
-colorscheme desert
+" colorscheme desert
 set bg=dark
 
 " Set relative line numbers except current line
