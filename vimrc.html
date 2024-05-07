@@ -13,10 +13,7 @@
 
 	<div class="floating_box">
 		<br>
-
-        <button type="button" onClick="copyEvent('copy')">Copy</button>
         <p><a href="vimrc.txt">vimrc.txt</a></p>
-
 		<code id="copy">
 set nocompatible " set as not compatible with vi
 set hlsearch " hightlight search pattern matches
@@ -76,20 +73,6 @@ highlight CursorLineNr ctermfg=black ctermbg=074 cterm=NONE
 </code>
 <br>
 	</div class="floating_box">
-
 	<footer><p><a href="index.html">home</a></p></footer>
-
 </body>
-
-
-<script>
-    function copyEvent(id)
-    {
-        var str = document.getElementById(id);
-        window.getSelection().selectAllChildren(str);
-        document.execCommand("Copy");
-    }
-</script>
-
-
 </html>
