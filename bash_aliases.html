@@ -14,7 +14,6 @@
 	<div class="floating_box">
 		<br>
 
-        <button type="button" onClick="copyEvent('copy')">Copy</button>
         <p><a href="bash_aliases.txt">bash_aliases.txt</a></p>
 
 		<code id="copy">
@@ -30,16 +29,4 @@ alias ..="cd .."
 	<footer><p><a href="index.html">home</a></p></footer>
 
 </body>
-
-
-<script>
-    function copyEvent(id)
-    {
-        var str = document.getElementById(id);
-        window.getSelection().selectAllChildren(str);
-        document.execCommand("Copy");
-    }
-</script>
-
-
 </html>
