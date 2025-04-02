@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+        <title>Vimrc | David's Site</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image\x-icon" href="images/cube.ico">
+</head>
+
+<body>
+
+        <h1>Configuring Redshift on Linux</h1>
+        <div class="floating_box">
+                <p>If redshift is not already installed on your system, you can probably do so using your package manager. Installation may create a configuration file, probaby at <code>~/.config/redshift.conf</code>, but you might have to do this yourself, at that same location. Below is a simple config file for someone located in Ottawa, Canada. Note that the negative longitude indicates the western hemisphere.</p>
+                <p>Restart your system and Redshift should start on its own.</p>
+                <br>
+                <code id="copy">
+[redshift]
+temp-day=5700
+temp-night=3600
+adjustment-method=randr
+location-provider=manual
+
+[manual]
+lat=45.5
+lon=-75.6
+</code>
+<br>
+        </div>
+        <footer>
+                <p><a href="index.html">home</a></p>
+        </footer>
+</body>
+</html>
