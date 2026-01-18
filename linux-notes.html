@@ -14,6 +14,7 @@
 <body>
 	
 	<div class="floating_box">
+                <p>Most of these were done on Fedora 42 XFCE unless otherwise specified. They may not work on other systems.</p>
 		<h2>Remove repo from Fedora</h2>
                 <p>
 <code>
@@ -39,6 +40,10 @@ sudo dnf5 update --refresh
                         <p>Download file</p>
                         <p>Move file to <code>/usr/share/icons/hicolor/scalable/apps/</code> (needs sudo privilege)</p>
                         <p>Run <code>sudo gtk-update-icon-cache /usr/share/icons/hicolor</code></p>
+                <br>
+		<h2>Keep bluetooth turned off by default</h2>
+                        <p>Go to <code>etc/bluetooth/main.conf</code></p>
+                        <p>Make sure the file has the line <code>AutoEnable=False</code></p>
                 <br>
 	</div>
 	
