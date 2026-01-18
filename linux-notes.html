@@ -15,20 +15,30 @@
 	
 	<div class="floating_box">
 		<h2>Remove repo from Fedora</h2>
-                        <p>ls /etc/yum.repos.d/* (show all added repos)</p>
-                        <p>sudo rm /etc/yum.repos.d/<file_name>.repo</p>
+                <p>
+<code>
+ls /etc/yum.repos.d/*
+sudo rm /etc/yum.repos.d/file_name.repo
+</code>
+                </p>
                 <br>
 		<h2>Fedora System logs</h2>
-                        <p> /var/log/messages </p>
+                <p>
+                <p>Check <code>/var/log/messages</code></p>
+                </p>
                 <br>
 		<h2>Clean dnf5 repositories</h2>
-                        <p>sudo dnf5 clean all</p>
-                        <p>sudo dnf5 update --refresh</p>
+                <p>
+<code>
+sudo dnf5 clean all
+sudo dnf5 update --refresh
+</code>
+                </p>
                 <br>
 		<h2>Add custom icon to icon list for Fedora XFCE panel</h2>
                         <p>Download file</p>
-                        <p>Move file to /usr/share/icons/hicolor/scalable/apps/ (needs sudo privilege)</p>
-                        <p>Run sudo gtk-update-icon-cache /usr/share/icons/hicolor</p>
+                        <p>Move file to <code>/usr/share/icons/hicolor/scalable/apps/</code> (needs sudo privilege)</p>
+                        <p>Run <code>sudo gtk-update-icon-cache /usr/share/icons/hicolor</code></p>
                 <br>
 	</div>
 	
