@@ -45,6 +45,30 @@ sudo dnf5 update --refresh
                         <p>Go to <code>etc/bluetooth/main.conf</code></p>
                         <p>Make sure the file has the line <code>AutoEnable=False</code></p>
                 <br>
+                <h2>swap caps lock and backspace</h2>
+
+                <p>1. Create an xmodmap file</p>
+                <p><code>vim ~/.Xmodmap</code></p>
+
+                <p>2. Paste this in:
+<code>
+
+keycode 66 = BackSpace
+keycode 22 = Caps_Lock
+clear Lock
+add Lock = Caps_Lock
+</code>
+                </p>
+
+<p>3. Apply it:</p>
+<p><code>xmodmap ~/.Xmodmap`</code></p>
+
+<p>4. Open Settings -> Session and Startup</p>
+<p>5. Go to Application Autostart</p>
+<p>6. Add a new entry:</p>
+<p>- Name: Xmodmap</p>
+<p>- Command: `xmodmap ~/.Xmodmap`</p>
+<p>- Trigger: On login</p>
 	</div>
 	
     <footer>
