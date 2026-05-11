@@ -61,16 +61,16 @@
 
         <h3>Introduction to IPFS</h3>
 
-        <p>The goal of IPFS is to construct a single distributed filesystem which could be accessed by any 
-        computer. There is no single point of failure and nodes in the system do not need to trust eachother.[1]</p>
+        <p>We see in [1] that the goal of IPFS is to construct a single distributed filesystem which could be accessed by any 
+        computer. There is no single point of failure and nodes in the system do not need to trust eachother.</p>
 
-        <p>HTTP has many limitations are now coming to light, with challenges like handling massive datasets 
+        <p>[1] also describes how HTTP has many limitations which are now coming to light, with challenges like handling massive datasets 
         and interacting with data across many organizations. The way the web was originally constructed is not 
-        suitable for all uses today, and new protocols and systems are needed. [1]</p>
+        suitable for all uses today, and new protocols and systems are needed.</p>
 
         <h3>Components</h3>
 
-        <p>IPFS is built from a selection of preexisting technologies that are combined into a modular stack.[1]</p>
+        <p>IPFS is built from a selection of preexisting technologies that are combined into a modular stack [1].</p>
 
         <p>There are 4 important aspects which make IPFS work the way it does:</p>
 
@@ -81,34 +81,32 @@
         <li>Immutability</li>
         </ol>
 
-        <h4>Content Adressing [2]</h4>
+        <h4>Content Adressing</h4>
 
         <p>When content (i.e. a file) is uploaded to IPFS, it is broken into chunks of a certain size (256kB),
-        and each chunk is given a Content Identifier (CID). </p>
-
-        <p>CID has a designated structure which holds some data (like a header) and then contains the hash of 
+        and each chunk is given a Content Identifier (CID). CID has a designated structure which holds some data (like a header) and then contains the hash of 
         the file content. Using all the chunks of a file, IPFS makes a Merkle Directed Acyclic Graph (DAG) of 
-        the file.</p>
+        the file [2].</p>
 
         <p><code> cid version | multicodec | length | actual hash </code></p>
 
         <h4>Obejct Indexing</h4>
 
         <p>The IPFS network has a mapping of CID and PeerID for a particular object so that it can serve it to 
-        a client. Mappings are stored in a Distributed Hash Table (DHT).[2]</p>
+        a client. Mappings are stored in a Distributed Hash Table (DHT) [2].</p>
 
         <h4>Peer Addressing</h4>
         <p>When a peer joins the IPFS network, it generates a public-private key pair. </p>
 
         <p>Each peer in the network is given and identified by a unique PeerID, which is a hash of its public 
         key. The PeerID does not change unless it is changes manually. Its function is to ensure that the public 
-        key used to secure the communication channel between peers is the same one that identifies them.[2]</p>
+        key used to secure the communication channel between peers is the same one that identifies them [2].</p>
 
         <h4>Content Immutability</h4>
 
         <p>CIDs are inherently permenant and immutable. Dynamic content can be specified to be published using a 
         hash of the providers public key (i.e. PeerID) instead of the CIC. Additional constructs are used to 
-        create an immutable reference to the content which is not based on a hash of the actual data.[2]</p>
+        create an immutable reference to the content which is not based on a hash of the actual data [2].</p>
 
         <h4>Assessment of Previous Research</h4>
 
@@ -121,10 +119,10 @@
         <h3>Project Direction</h3>
 
         <p>The project will consist of several parts. The first section will be a report describing the technical
-        specifications and components of IPFS. The next section will describe the research that has been done. 
-        The third part will be my own research and testing, mostly looking at how easy and effective it is to host
-        and distribute multimedia files over IPFS. More planning needs to go into this section. Finally, as
-        summary will be given on the possible future of a decentralized internet.</p>
+        specifications and components of IPFS. The second section will describe the research that has been done. 
+        The third will be our own research and testing, mostly looking at how easy and effective it is to host
+        and distribute multimedia files over IPFS. More planning needs to go into this section. Finally, some notes
+        will be given on the possible future of a decentralized internet.</p>
 
         <hr>
         <h2>Nov 20 2023</h2>
@@ -132,17 +130,17 @@
         <h3>Progress</h3>
         <p>There are a fairly large number of research papers about eiter IPFS specifically, the sub-components within IPFS, or the general group of protocols and 
         tools which can be used for a decentralized internet. Overall they include technical descriptions, experimental research and the results, and societal 
-        factors. The majority of my time has been reading and summarizing these papers, as well as planning the structure for the final report.</p>
+        factors. The majority of the research time has been reading and summarizing these papers, as well as planning the structure for the final report.</p>
         
         <h3>Focus</h3>
-        <p>Part of the final report will include experimental results, but they will not be my own. I have realized that collecting data on a peer-to-peer network is 
+        <p>Part of the final report will include experimental results from pre-existing research. because collecting data on a peer-to-peer network is 
         not feasible withing the alloted time, and will very likely not give novel insights. However, research will be focused more on using IPFS for delivering 
-        multimedia content, as this is somewhat neglected in research. Some research has been done though, and I will be compiling that and providing an assessment.</p>
+        multimedia content, as this is somewhat neglected in research.</p>
         
         <h3>Next Steps</h3>
         <p>With the majority of the reasearch done, more time will now go to drafting the final deliverables. The plan at this point is for a written report giving a 
-        technical overview of IPFS, Looking into experimental findings with some focus on delivering multimedia content, and then an assessment of the system as a 
-        possible compliment or maybe a replacement of current client-server infrastructure.</p>
+        technical overview of IPFS, looking into experimental findings with some focus on delivering multimedia content, and then an assessment of the system as a 
+        possible compliment or replacement of current client-server infrastructure.</p>
 
 
 	</div>
@@ -150,6 +148,7 @@
     <footer>
         <p><a href='../ipfs/citations.html'>citations</a></p>
         <p><a href='../ipfs/research.html'>back</a></p>
+        <p><a href='../ipfs/report.html'>next</a></p>
     </footer>
 </body>
 
